@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Mount Sinai Test Suite]">
+  <listeners>
+    <listener class-name="org.mountsinai.qa.test.listeners.ExtentReportListener"/>
+    <listener class-name="org.mountsinai.qa.test.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="5" verbose="4" name="Mount Sinai sanity Test(failed)">
+    <classes>
+      <class name="org.mountsinai.qa.tests.HomePageTest">
+        <methods>
+          <include name="testChooseAUrgentCareLocation"/>
+          <include name="testSelectHospitals1"/>
+          <include name="testInternational"/>
+          <include name="testSameDay"/>
+          <include name="testLearnMore"/>
+          <include name="testViewMoreLocations"/>
+          <include name="testGoZipCode"/>
+          <include name="testCaptionOfSymbolOfEmployees"/>
+          <include name="testBriefcase"/>
+          <include name="testIcahnSchoolOfMedicine"/>
+          <include name="testBookNow"/>
+          <include name="testDescriptionUrgentCare"/>
+          <include name="testFindALocation"/>
+          <include name="testMountSinaiAtAGlance"/>
+          <include name="testSymbolOfMap"/>
+          <include name="testBlogInTwitter"/>
+          <include name="testCommunityLocations300Plus"/>
+          <include name="testFindADoctor2"/>
+          <include name="testLastName"/>
+          <include name="testSpecialty"/>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="testOurLocations"/>
+          <include name="testBookAnAppointment"/>
+          <include name="testUrgentCareAndWalkIn1"/>
+          <include name="testThirtyEightSInstitutes"/>
+          <include name="testHospitals1"/>
+          <include name="testName"/>
+          <include name="testSymbolOfInstitutes"/>
+          <include name="setUp"/>
+          <include name="testCalender"/>
+          <include name="quitBrowser"/>
+          <include name="testClock"/>
+          <include name="testOver42000Employees"/>
+          <include name="testUrgentCare"/>
+          <include name="testFirstName"/>
+          <include name="testDescriptionInternational"/>
+          <include name="testPatientCare"/>
+          <include name="testDescriptionBookNow"/>
+          <include name="testNews"/>
+          <include name="testSelectSpecialty"/>
+          <include name="testRequestAnAppointment2"/>
+          <include name="testGlobe"/>
+          <include name="testEnterZipCode"/>
+          <include name="testGo"/>
+          <include name="testSymbolOfEmployees"/>
+          <include name="testChooseALocation"/>
+          <include name="testDescriptionSameDay"/>
+          <include name="testPrimaryCare"/>
+          <include name="testRequestAnAppointment1"/>
+        </methods>
+      </class> <!-- org.mountsinai.qa.tests.HomePageTest -->
+    </classes>
+  </test> <!-- Mount Sinai sanity Test(failed) -->
+</suite> <!-- Failed suite [Mount Sinai Test Suite] -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Mount Sinai Test Suite" verbose="4">
+
+	<listeners>
+		<listener class-name="org.mountsinai.qa.test.listeners.ExtentReportListener" />
+		<listener class-name="org.mountsinai.qa.test.listeners.TestAllureListener" />
+
+	</listeners>
+
+	<test name="Mount Sinai sanity Test">
+		<classes>
+			<class name="org.mountsinai.qa.tests.HomePageTest" />
+			<!-- <class name="com.qa.hubspot.tests.HomePageTest" /> -->
+		</classes>
+	</test>
+</suite>
