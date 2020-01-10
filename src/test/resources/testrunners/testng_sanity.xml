@@ -11,8 +11,9 @@
 
 	<test name="Mount Sinai sanity Test">
 		<classes>
-			<class name="org.mountsinai.qa.tests.HomePageTest" />
-			<!-- <class name="com.qa.hubspot.tests.HomePageTest" /> -->
+			<!-- <class name="org.mountsinai.qa.tests.HomePageTest" /> -->
+			<class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest" />
+			
 		</classes>
 	</test>
 </suite>
