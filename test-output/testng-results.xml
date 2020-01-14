@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="11" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Mount Sinai Test Suite" duration-ms="8082" started-at="2020-01-10T17:04:29Z" finished-at="2020-01-10T17:04:37Z">
+  <suite name="Mount Sinai Test Suite" duration-ms="15021" started-at="2020-01-14T03:38:20Z" finished-at="2020-01-14T03:38:35Z">
     <groups>
     </groups>
-    <test name="Mount Sinai sanity Test" duration-ms="8082" started-at="2020-01-10T17:04:29Z" finished-at="2020-01-10T17:04:37Z">
+    <test name="Mount Sinai sanity Test" duration-ms="15021" started-at="2020-01-14T03:38:20Z" finished-at="2020-01-14T03:38:35Z">
       <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@4466af20]" name="setUp" is-config="true" duration-ms="7157" started-at="2020-01-10T17:04:29Z" finished-at="2020-01-10T17:04:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="setUp" is-config="true" duration-ms="8555" started-at="2020-01-14T03:38:20Z" finished-at="2020-01-14T03:38:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContactNumber()[pri:2, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@4466af20]" name="testContactNumber" duration-ms="314" started-at="2020-01-10T17:04:36Z" finished-at="2020-01-10T17:04:36Z">
+        <test-method status="PASS" signature="testForPhysician()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testForPhysician" duration-ms="302" started-at="2020-01-14T03:38:29Z" finished-at="2020-01-14T03:38:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactNumber -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@4466af20]" name="quitBrowser" is-config="true" duration-ms="319" started-at="2020-01-10T17:04:36Z" finished-at="2020-01-10T17:04:37Z">
+        </test-method> <!-- testForPhysician -->
+        <test-method status="PASS" signature="testForPhysician()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testForPhysician" duration-ms="63" started-at="2020-01-14T03:38:29Z" finished-at="2020-01-14T03:38:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForPhysician -->
+        <test-method status="PASS" signature="testLogo()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testLogo" duration-ms="44" started-at="2020-01-14T03:38:29Z" finished-at="2020-01-14T03:38:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogo -->
+        <test-method status="PASS" signature="testMyChart()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testMyChart" duration-ms="141" started-at="2020-01-14T03:38:29Z" finished-at="2020-01-14T03:38:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMyChart -->
+        <test-method status="PASS" signature="testSpecialityButton()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testSpecialityButton" duration-ms="37" started-at="2020-01-14T03:38:29Z" finished-at="2020-01-14T03:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSpecialityButton -->
+        <test-method status="PASS" signature="testSpecialityButton()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testSpecialityButton" duration-ms="23" started-at="2020-01-14T03:38:30Z" finished-at="2020-01-14T03:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSpecialityButton -->
+        <test-method status="PASS" signature="testBookAnAppointment()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testBookAnAppointment" duration-ms="57" started-at="2020-01-14T03:38:30Z" finished-at="2020-01-14T03:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBookAnAppointment -->
+        <test-method status="PASS" signature="testPayMyBill()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testPayMyBill" duration-ms="74" started-at="2020-01-14T03:38:30Z" finished-at="2020-01-14T03:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPayMyBill -->
+        <test-method status="PASS" signature="testHomePageTitle()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testHomePageTitle" duration-ms="10" started-at="2020-01-14T03:38:30Z" depends-on-methods="org.mountsinai.qa.tests.LearningSeleniumMethodsTest.testLogo" finished-at="2020-01-14T03:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomePageTitle -->
+        <test-method status="PASS" signature="testMountSinaiAtAGlance()[pri:1, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="testMountSinaiAtAGlance" duration-ms="5075" started-at="2020-01-14T03:38:30Z" finished-at="2020-01-14T03:38:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMountSinaiAtAGlance -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.mountsinai.qa.tests.LearningSeleniumMethodsTest@a514af7]" name="quitBrowser" is-config="true" duration-ms="310" started-at="2020-01-14T03:38:35Z" finished-at="2020-01-14T03:38:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->

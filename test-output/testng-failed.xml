@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Mount Sinai Test Suite]">
+  <listeners>
+    <listener class-name="org.mountsinai.qa.test.listeners.ExtentReportListener"/>
+    <listener class-name="org.mountsinai.qa.test.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="5" verbose="4" name="Mount Sinai sanity Test(failed)">
     <classes>
       <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
         <methods>
+          <include name="testSpecialityButton"/>
           <include name="quitBrowser"/>
-          <include name="testLogo"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.mountsinai.qa.tests.LearningSeleniumMethodsTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Mount Sinai sanity Test(failed) -->
+</suite> <!-- Failed suite [Mount Sinai Test Suite] -->
