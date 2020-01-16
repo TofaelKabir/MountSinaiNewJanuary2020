@@ -9,8 +9,12 @@
     <classes>
       <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
         <methods>
-          <include name="testSpecialityButton"/>
+          <include name="testHomePageTitle"/>
+          <include name="testIreneRahmanBySearch"/>
           <include name="quitBrowser"/>
+          <include name="testBookAnAppointment"/>
+          <include name="testLogo"/>
+          <include name="testMountSinaiAtAGlance"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.mountsinai.qa.tests.LearningSeleniumMethodsTest -->

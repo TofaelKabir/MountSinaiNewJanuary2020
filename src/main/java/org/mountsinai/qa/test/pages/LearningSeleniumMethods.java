@@ -25,7 +25,7 @@ public class LearningSeleniumMethods extends BasePage {
 	}
 	
 	//Number#1 standard
-	@FindBy(xpath = "//h2[starts-with(text(),'Mount Sinai at a Glance')]")
+	@FindBy(xpath = "//h2[starts-with(text(),'Mount Sinai at')]") //used when a para or several sentence is used
 	public static WebElement mountSinaiAtAGlance;
 
 	public void checkMountSinaiAtAGlance() {

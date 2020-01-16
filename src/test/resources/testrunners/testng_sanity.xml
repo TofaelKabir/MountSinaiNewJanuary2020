@@ -17,6 +17,7 @@
 			<class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest" >
 			<methods>
 				<exclude name="testContactNumber()"></exclude>
+				<!-- <include name="testHomePageTitle()"></include> -->
 			</methods>
 			</class>
 
