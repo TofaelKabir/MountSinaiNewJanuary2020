@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
+      <class name="org.mountsinai.qa.tests.UnitTestingHere">
         <methods>
+          <include name="findADoctorByNameTest2"/>
           <include name="quitBrowser"/>
-          <include name="testLogo"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- org.mountsinai.qa.tests.LearningSeleniumMethodsTest -->
+      </class> <!-- org.mountsinai.qa.tests.UnitTestingHere -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

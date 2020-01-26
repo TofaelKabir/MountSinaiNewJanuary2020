@@ -13,6 +13,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Parameters;
+
+import com.beust.jcommander.Parameter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -33,6 +36,11 @@ public class BasePage {
 	 * @param browser
 	 * @return driver
 	 */
+	
+	//@Parameters("browser")
+  
+	
+	
 	public WebDriver init_driver(Properties prop) {
 		String browser = prop.getProperty("browser");
 

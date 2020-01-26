@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Mount Sinai Test Groups]">
+  <listeners>
+    <listener class-name="org.mountsinai.qa.test.listeners.ExtentReportListener"/>
+    <listener class-name="org.mountsinai.qa.test.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="5" verbose="4" name="Depends-onGroup(failed)">
+    <classes>
+      <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
+        <methods>
+          <include name="testHomePageTitle"/>
+          <include name="testIreneRahmanBySearch"/>
+          <include name="testSpecialty"/>
+          <include name="testEnterZipCode"/>
+          <include name="testSymbolOfEmployees"/>
+          <include name="testDescriptionSameDay"/>
+          <include name="testRequestAnAppointment2"/>
+          <include name="testLogo"/>
+          <include name="testPrimaryCare"/>
+          <include name="testUrgentCareDescription"/>
+          <include name="testCaptionOfSymbolOfEmployees"/>
+          <include name="testGoZipCode"/>
+          <include name="quitBrowser"/>
+          <include name="testDescriptionUrgentCare"/>
+          <include name="testBriefcase"/>
+          <include name="testOver42000Employees"/>
+          <include name="findADoctor"/>
+          <include name="testPayMyBill"/>
+          <include name="testUrgentCare"/>
+          <include name="testMountSinaiAtAGlance"/>
+          <include name="testNews"/>
+          <include name="testSameDay"/>
+          <include name="testBookAnAppointment"/>
+          <include name="testNGException1"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- org.mountsinai.qa.tests.LearningSeleniumMethodsTest -->
+    </classes>
+  </test> <!-- Depends-onGroup(failed) -->
+</suite> <!-- Failed suite [Mount Sinai Test Groups] -->

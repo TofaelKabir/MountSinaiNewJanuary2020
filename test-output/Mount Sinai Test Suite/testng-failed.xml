@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Mount Sinai Test Suite]">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Mount Sinai Test Suite]">
   <listeners>
     <listener class-name="org.mountsinai.qa.test.listeners.ExtentReportListener"/>
     <listener class-name="org.mountsinai.qa.test.listeners.TestAllureListener"/>
   </listeners>
-  <test thread-count="5" verbose="4" name="Mount Sinai sanity Test(failed)">
+  <test thread-count="5" verbose="10" name="Mount Sinai sanity Test(failed)">
     <classes>
       <class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest">
         <methods>
           <include name="testHomePageTitle"/>
-          <include name="testIreneRahmanBySearch"/>
+          <include name="testSpecialty"/>
           <include name="quitBrowser"/>
-          <include name="testBookAnAppointment"/>
-          <include name="testLogo"/>
-          <include name="testMountSinaiAtAGlance"/>
+          <include name="testRequestAnAppointment2"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.mountsinai.qa.tests.LearningSeleniumMethodsTest -->

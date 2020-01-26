@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Mount Sinai Test Groups" verbose="4">
+
+	<listeners>
+		<listener
+			class-name="org.mountsinai.qa.test.listeners.ExtentReportListener"></listener>
+		<listener
+			class-name="org.mountsinai.qa.test.listeners.TestAllureListener"></listener>
+	</listeners>
+
+	<test name="grouping">
+
+		<groups>
+		<!-- <group name = "functionalTeat" depends-on=""></group> -->
+			<!-- <define name="all">
+				<include name="functionalTest"></include>
+				<include name="regressionTest"></include>
+				<include name="smokeTest"></include>
+				<include name="sanityTest"></include>
+			</define> -->
+			
+			<run>
+				<include name="functionalTest"></include>
+				<exclude name="unitTest"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="org.mountsinai.qa.tests.LearningSeleniumMethodsTest" ></class> 
+		</classes>
+	</test>
+
+</suite>
