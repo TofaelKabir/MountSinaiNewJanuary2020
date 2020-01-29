@@ -30,6 +30,7 @@ public class LearningSeleniumMethodsTest {
 	SoftAssert sa;
 	Select select;
 	WebDriverWait wait;
+	JavascriptExecutor js;
 
 	@BeforeTest
 	public void setUp() {
@@ -39,6 +40,7 @@ public class LearningSeleniumMethodsTest {
 		sa = new SoftAssert();
 		lsm = PageFactory.initElements(driver, LearningSeleniumMethods.class);
 		wait = new WebDriverWait(driver, 5);
+		js = (JavascriptExecutor) driver;
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -133,10 +135,9 @@ public class LearningSeleniumMethodsTest {
 		driver.findElement(By.xpath("//span[text()='Search']//parent::a[@class='hidden-xs dropdown']")).click();
 		driver.findElement(By.xpath("(//input[@class='form-control dropdown-menu__input--search'])[2]"))
 				.sendKeys("Asad Mohammad");
+		driver.findElement(By.xpath("(//input[@class='form-control dropdown-menu__input--search'])[2]")).clear();
 		driver.findElement(By.xpath("(//input[@class='form-control dropdown-menu__input--search'])[2]"))
-		.clear();
-		driver.findElement(By.xpath("(//input[@class='form-control dropdown-menu__input--search'])[2]"))
-		.sendKeys("Andrea Perez");
+				.sendKeys("Andrea Perez");
 		driver.findElement(By.xpath("(//button[contains(text(),'Search')])[2]")).click();
 	}
 
@@ -158,26 +159,22 @@ public class LearningSeleniumMethodsTest {
 	}
 
 	// Nasir bhai
-			@Test
-			public void ireneRahmanBySearchTest1() throws InterruptedException {
-				WebElement searchKey = driver.findElement(By.xpath("(//span[contains(text(),'Search')])[1]"));
-				WebElement searchButton = driver.findElement(By.xpath("(//button[contains(text(),'Search')])[2]"));
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript("arguments[0].click()", searchKey);
-				Thread.sleep(3000);
+	@Test
+	public void ireneRahmanBySearchTest1() throws InterruptedException {
+		WebElement searchKey = driver.findElement(By.xpath("(//span[contains(text(),'Search')])[1]"));
+		WebElement searchButton = driver.findElement(By.xpath("(//button[contains(text(),'Search')])[2]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", searchKey);
+		Thread.sleep(3000);
 //				js.executeScript(
 //						"document.getElementByXpath('(//input[@class='form-control dropdown-menu__input--search'])[2]').setAttribute('Value', Irene Rahman);");
 //				
 //				js.executeScript(
 //						"document.getElementByXpath('(//input[@class='form-control dropdown-menu__input--search'])[2]').setRangeText('Irene Rahman');");
 //				
-				js.executeScript("arguments[0].click()", searchButton);
-			}
+		js.executeScript("arguments[0].click()", searchButton);
+	}
 
-		
-
-
-	
 	// do the homework: find asad mohammmad from find a doctor
 	@Test(groups = { "functionalTest", "regressionTest" })
 	public void findADoctorByNameTest0() {
@@ -513,8 +510,97 @@ public class LearningSeleniumMethodsTest {
 		driver.findElement(By.xpath("(//span[contains(text(),'By Name')])[4]")).click();
 		driver.findElement(By.xpath("(//input[@name='firstName'])[3]")).sendKeys("Ahmed");
 		driver.findElement(By.xpath("(//input[@name='lastName'])[3]")).sendKeys("Asad", Keys.ENTER);
-		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getCurrentUrl()); //GET CURRENT URL
 
+	}
+
+	// working
+	@Test
+	public void AndreaPerezBySearchTest() throws InterruptedException {
+		WebElement searchKey = driver.findElement(By.xpath("(//span[contains(text(),'Search')])[1]"));
+		WebElement searchField = driver
+				.findElement(By.xpath("(//input[@class='form-control dropdown-menu__input--search'])[2]"));
+		WebElement submitButton = driver.findElement(By.xpath("(//button[contains(text(),'Search')])[2]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", searchKey);
+		Thread.sleep(3000);
+//				js.executeScript("document.getElementByXpath('(//input[@class='form-control dropdown-menu__input--search'])[2]').setAttribute('Value', Irene Rahman);");
+		js.executeScript("arguments[0].value='Andrea Perez'", searchField);
+//				js.executeScript("document.getElementByXpath('(//input[@class='form-control dropdown-menu__input--search'])[2]').setRangeText('Irene Rahman');");
+
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].click()", submitButton);
+	}
+
+	// "Submit" by clicking "Enter" button from keyboard
+	// not working after find a doctor, tried it many ways
+	@Test
+	public void findADoctorByNameTest3() throws Exception {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement findADoctor = driver.findElement(By.xpath("(//a[@class='hidden-xs dropdown'])[2]"));
+		// Thread.sleep(5000);// Generally smart tester don't use it, they use
+		// webdriverWait.
+		WebElement findADoctorBySpeciality = driver
+				.findElement(By.xpath("(//span[contains(text(),'By Specialty')])[3]"));
+
+		WebElement findADoctorByName = driver.findElement(By.xpath("(//span[contains(text(),'By Name')])[4]"));
+		WebElement lastName = driver.findElement(By.xpath("(//input[@name='lastName'])[3]"));
+		WebElement firstName = driver.findElement(By.xpath("(//input[@name='firstName'])[3]"));
+		WebElement goButton = driver.findElement(By.xpath("(//button[contains(text(),'Go')])[6]"));
+		js.executeScript("arguments[0].click()", findADoctor);
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].click()", findADoctorBySpeciality);
+		js.executeScript("arguments[0].click()", findADoctorByName);
+		js.executeScript("arguments[0].value='Perez'", lastName);
+		js.executeScript("arguments[0].value='Andrea'", firstName);
+		js.executeScript("arguments[0].click()", goButton);
+
+	}
+
+	// use of navigate().to()
+	// use of navigate().back()
+	// use of navigate().forward()
+	// use of navigate().forward()
+	// use of Javascript
+	// use of setSize() of the browser
+
+	
+	@Test
+	public void sendKeysToAmazonSearch() throws InterruptedException {
+		
+		Thread.sleep(2000);
+		driver.navigate().to("https://www.amazon.com/"); //alternate to .get(), difference -- .get() method helps to initiate the browser until it is loaded
+		// This will scroll down the page by 3000 pixel vertical
+		Thread.sleep(4000); //used to see the scroll
+		js.executeScript("window.scrollBy(0,3000)",""); //scroll down
+		// This will scroll up the page by 3000 pixel vertical
+		Thread.sleep(4000);
+		js.executeScript("window.scrollBy(0,-3000)",""); //scroll-up
+		driver.navigate().back(); //Back to Mountsinai
+		driver.navigate().forward(); //returned to Amazon
+		driver.navigate().refresh();  // to refresh
+		
+		js.executeScript("history.go(0)"); // To do refresh by Javascript
+		String sText =js.executeScript("return document.title;").toString(); // fetching page title by javascript
+		System.out.println(sText);
+		
+		WebElement searchField = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+		WebElement submitButton = driver.findElement(By.xpath("//input[@tabindex='20']"));
+		
+		js.executeScript("arguments[0].value='macbook air'", searchField); //to send keys
+		
+		js.executeScript("arguments[0].click()", submitButton); //to do click
+		
+		Thread.sleep(5000);
+		
+		driver.navigate().to("https://www.mountsinai.org/");
+		
+		org.openqa.selenium.Dimension ds = new org.openqa.selenium.Dimension(480, 620); //Dimension class to reset size
+		driver.manage().window().setSize(ds);
+		Thread.sleep(2000); //to see the change
+		driver.manage().window().fullscreen();
+		Thread.sleep(4000);
+		
 	}
 
 	@AfterTest
