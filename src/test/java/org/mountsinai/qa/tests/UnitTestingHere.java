@@ -1,6 +1,9 @@
 package org.mountsinai.qa.tests;
 
+import java.awt.AWTException;
 import java.awt.Dimension;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.Properties;
 import org.mountsinai.qa.test.base.BasePage;
 import org.mountsinai.qa.test.pages.LearningSeleniumMethods;
@@ -84,7 +87,7 @@ public class UnitTestingHere {
 	//use of setSize() of the browser
 	
 	@Test
-	public void sendKeysToAmazonSearch() throws InterruptedException {
+	public void sendKeysToAmazonSearch() throws InterruptedException, AWTException {
 		
 		Thread.sleep(2000);
 		driver.navigate().to("https://www.amazon.com/"); //alternate to .get(), difference -- .get() method helps to initiate the browser until it is loaded
@@ -119,6 +122,15 @@ public class UnitTestingHere {
 		driver.manage().window().fullscreen();
 		Thread.sleep(4000);
 		
+		Robot robot = new Robot();
+
+        // Scroll Down using Robot class
+        robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+        robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+
+        // Scroll Up using Robot class
+        robot.keyPress(KeyEvent.VK_PAGE_UP);
+        robot.keyRelease(KeyEvent.VK_PAGE_UP);
 	}
 
 //		//Find element by link text and store in variable "Element"        		

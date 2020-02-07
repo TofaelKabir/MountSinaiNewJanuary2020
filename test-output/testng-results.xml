@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50106" started-at="2020-01-28T23:58:05Z" finished-at="2020-01-28T23:58:55Z">
+  <suite name="Default suite" duration-ms="56254" started-at="2020-02-01T19:40:16Z" finished-at="2020-02-01T19:41:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50106" started-at="2020-01-28T23:58:05Z" finished-at="2020-01-28T23:58:55Z">
+    <test name="Default test" duration-ms="56254" started-at="2020-02-01T19:40:16Z" finished-at="2020-02-01T19:41:12Z">
       <class name="org.mountsinai.qa.tests.UnitTestingHere">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="setUp" is-config="true" duration-ms="8389" started-at="2020-01-28T23:58:05Z" finished-at="2020-01-28T23:58:13Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="setUp" is-config="true" duration-ms="8291" started-at="2020-02-01T19:40:16Z" finished-at="2020-02-01T19:40:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="sendKeysToAmazonSearch()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="sendKeysToAmazonSearch" duration-ms="40952" started-at="2020-01-28T23:58:13Z" finished-at="2020-01-28T23:58:54Z">
+        <test-method status="PASS" signature="sendKeysToAmazonSearch()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="sendKeysToAmazonSearch" duration-ms="47571" started-at="2020-02-01T19:40:24Z" finished-at="2020-02-01T19:41:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendKeysToAmazonSearch -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="quitBrowser" is-config="true" duration-ms="600" started-at="2020-01-28T23:58:54Z" finished-at="2020-01-28T23:58:55Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.mountsinai.qa.tests.UnitTestingHere@79ca92b9]" name="quitBrowser" is-config="true" duration-ms="227" started-at="2020-02-01T19:41:12Z" finished-at="2020-02-01T19:41:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->

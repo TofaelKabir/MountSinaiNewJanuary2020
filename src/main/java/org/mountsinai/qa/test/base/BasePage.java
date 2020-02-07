@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -46,6 +47,7 @@ public class BasePage {
 
 		if (browser.equals("chrome")) { //String type method
 			WebDriverManager.chromedriver().setup();
+		
 			//driver = new ChromeDriver();
 			tldriver.set(new ChromeDriver());
 		} else if (browser.equals("firefox")) {
@@ -60,7 +62,7 @@ public class BasePage {
 		} else {
 			System.out.println("Please pass the correct browser name....");
 		}
-
+		getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		getDriver().manage().window().fullscreen();
 		getDriver().manage().deleteAllCookies();
 		

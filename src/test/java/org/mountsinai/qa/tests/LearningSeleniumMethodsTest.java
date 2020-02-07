@@ -1,5 +1,8 @@
 package org.mountsinai.qa.tests;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.Properties;
 import org.mountsinai.qa.test.base.BasePage;
 import org.mountsinai.qa.test.pages.LearningSeleniumMethods;
@@ -10,6 +13,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -66,7 +70,7 @@ public class LearningSeleniumMethodsTest {
 		Assert.assertTrue(true, "For Physician WebElement is not present...");
 	}
 
-	@Test(invocationCount = 2, enabled = false) // RUN 4 TIMES
+	@Test(invocationCount = 4, enabled = false) // RUN 4 TIMES
 	public void specialityButtonTest() {
 		lsm.verifySpecialityButton();
 		Assert.assertTrue(true); // hard assert
@@ -118,7 +122,7 @@ public class LearningSeleniumMethodsTest {
 
 		WebElement payMyBill = driver.findElement(By.xpath("(//a[text()='Pay My Bill'])[1]"));
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", payMyBill);
 
 	}
@@ -566,7 +570,7 @@ public class LearningSeleniumMethodsTest {
 
 	
 	@Test
-	public void sendKeysToAmazonSearch() throws InterruptedException {
+	public void sendKeysToAmazonSearch() throws InterruptedException, AWTException {
 		
 		Thread.sleep(2000);
 		driver.navigate().to("https://www.amazon.com/"); //alternate to .get(), difference -- .get() method helps to initiate the browser until it is loaded
@@ -601,7 +605,28 @@ public class LearningSeleniumMethodsTest {
 		driver.manage().window().fullscreen();
 		Thread.sleep(4000);
 		
+		//SCROLL DOWN BY SELENIUM
+		Robot robot = new Robot();
+
+        // Scroll Down using Robot class
+        robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+        robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+
+        // Scroll Up using Robot class
+        robot.keyPress(KeyEvent.VK_PAGE_UP);
+        robot.keyRelease(KeyEvent.VK_PAGE_UP);
+        
+        
+        Actions actions = new Actions(driver);
+
+        // Scroll Down using Actions class
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
+
+        // Scroll Up using Actions class
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform();
 	}
+	
+	@Test
 
 	@AfterTest
 	public void quitBrowser() {
